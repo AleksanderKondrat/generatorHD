@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class Data {
     private ArrayList<Place> places = new ArrayList<>();
     private ArrayList<Sport> sports = new ArrayList<>();
-    private ArrayList<Client> clients = new ArrayList<>();
     private String line = "";
     private String separator = ";";
     private String[] input;
@@ -55,12 +54,6 @@ public class Data {
         }
     }
 
-    public void generateClients(int amount, int initialClientId) {
-        for (int i = initialClientId; i < amount + initialClientId; i++){
-            this.clients.add(new Client(i));
-        }
-    }
-
     public void print() {
         for (Place p:places
              ) {
@@ -69,9 +62,6 @@ public class Data {
         for (Sport s:sports
                 ) {
             s.printSport();
-        }
-        for (Client c:clients) {
-            c.printClient();
         }
     }
 
