@@ -1,5 +1,7 @@
 package com.stencel;
 
+import java.util.ArrayList;
+
 public class Generator {
     private static final int noOfClients = 100;
     private static final int initialClientId = 1;
@@ -9,6 +11,10 @@ public class Generator {
         loadData();
         d.generateClients(noOfClients, initialClientId);
         d.print();
+        ArrayList<String> values = new ArrayList<>();
+        values.add("Panie");
+        values.add("Janie!");
+        new Insert("xD", values);
     }
 
     private void loadData() {
